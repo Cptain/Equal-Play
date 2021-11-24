@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/equal-sign.png" type="image/x-icon">
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Big+Shoulders+Display:wght@500;600;700&family=Space+Mono:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <title>Equal Play</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <!-- HEADER IMAGE -->
+        <picture>
+            <img class="header__img" src="images/lara-brush.png" alt="Lara Croft Render">
+        </picture>
+
+        <!-- LOGO -->
+        <nav class="flex flex-jc-sb flex-ai-c">
+            <a href="/">
+                <img class="header__logo" src="images/logo.png" alt="Equal Play Logo" />
+            </a>
+
+            <!-- MENU ICON -->
+            <a href="#" id="btnMenu" class="header__menu">
+                <span></span>
+                <span></span>
+            </a>
+
+            <!-- NAVIGATION LINKS -->
+            <div class="header__links col-sm hide">
+                <a href="#">Discover</a>
+                <a href="#">Timeline</a>
+                <a href="#">Suggest</a>
+                <a href="#">Interviews</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Login</a>
+                <a href="#">Register</a>
+            </div>
+
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <h1 class="hero__title">
+                Discover the world of gaming, <span class="--yellow">built for everyone.</span>
+            </h1>
+
+            <p class="hero__body">We have developed an accessible online library of female, trans, and non-binary game
+                designers, developers, artists, and all of their work, to <span
+                class="tooltip__tag" tabindex="0">promote diversity <span class="tooltip">In 2019, the US
+                    reported 46% of its gaming population were women while 75% of game developers worldwide were
+                    men.</span></span> and proper representation of its market.
+            </p>
+
+            <!-- CTA BUTTONS -->
+            <div class="hero__links flex flex-ai-c">
+                <a href="#" class="button button--primary">Discover Now</a>
+                <a href="#gallery" class="button button--secondary">Weekly Feature
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
+                        class="button__chevron" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                        </path>
+                    </svg></a>
+            </div>
+
+        </section>
+
+    </header>
+
+    <!-- GALLERY SECTION -->
+    <main class="main">
+
+        <section class="feature">
+            <h3 class="feature__title" id="gallery">
+                Character Designs. <span class="--yellow">getting better or worse?</span>
+            </h3>
+
+            <p class="feature__body">Sophitia is a character from the famous fighting game franchise, "Soulcalibur".
+                Although
+                Sophitia is a fighter, her armor seems to be slowly vanishing over the years.
+            </p>
+            <p class="feature__body">
+                Sexualization <i>can</i> exist
+                in the gaming world, but it <i>should</i> come with effort and purpose.
+            </p>
+        </section>
+
+        <!-- PHOTO GRID -->
+        <section class="grid">
+
+            <figure class="grid__item grid__item--1">
+                <img class="grid__img" src="images/sophitia-1.png" alt="Sophitia">
+                <div class="caption">
+                    <div class="caption__text">Soul Edge (artwork)</div>
+                </div>
+            </figure>
+
+            <figure class="grid__item grid__item--2">
+                <img class="grid__img" src="images/sophitia-2.png" alt="Sophitia">
+                <div class="caption">
+                    <div class="caption__text">Soulcalibur I (artwork)</div>
+                    </caption>
+            </figure>
+
+            <figure class="grid__item grid__item--3">
+                <img class="grid__img" src="images/sophitia-3.png" alt="Sophitia">
+                <div class="caption">
+                    <div class="caption__text">Soulcalibur II (artwork)</div>
+                    </caption>
+            </figure>
+
+            <figure class="grid__item grid__item--4">
+                <img class="grid__img" src="images/sophitia-4.png" alt="Sophitia">
+                <div class="caption">
+                    <div class="caption__text">Soulcalibur III (artwork)</div>
+                    </caption>
+            </figure>
+
+            <figure class="grid__item grid__item--5">
+                <img class="grid__img" src="images/sophitia-5.png" alt="Sophitia">
+                <div class="caption">
+                    <div class="caption__text">Soulcalibur Legends (artwork)</div>
+                    </caption>
+            </figure>
+
+            <figure class="grid__item grid__item--6">
+                <img class="grid__img" src="images/sophitia-6.png" alt="Sophitia">
+                <div class="caption">
+                    <div class="caption__text">Soulcalibur Lost Swords (artwork)</div>
+                    </caption>
+            </figure>
+
+            <figure class="grid__item grid__item--7">
+                <img class="grid__img grid__item--large" src="images/sophitia-7.png" alt="Sophitia">
+                <div class="caption">
+                    <div class="caption__text">Soulcalibur VI (in-game screenshot)</div>
+                    </caption>
+            </figure>
+
+        </section>
+
+        <section class="feature">
+            <h4 class="feature__subtitle">
+                Featuring this week <span class="--yellow">Sophitia</span>
+            </h4>
+            <div class="feature__cta flex flex-jc-sb flex-ai-fs">
+                <p class="feature__body">
+                    We have dedicated a timeline page where you can be the judge of the progressions, or deteriorations
+                    of
+                    the
+                    different characters we will be featuring each month.
+                </p>
+                <div class="feature__button flex flex-jc-c">
+                    <button class="button button--primary">View Full Feature</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SUGGESTION SECTION -->
+        <section class="suggestion">
+
+            <div class="container container-title">
+                <h3 class="suggestion__title">
+                    What should change? <span class="--yellow">Let's paint a new direction.</span>
+                </h3>
+            </div>
+            <div class="container container-form">
+                <form class="suggestion__form">
+                    <textarea id="suggestion-box" name="suggestion-box" placeholder="Write your suggestion here ..."
+                        minlength="10" maxlength="300"></textarea>
+                    <br>
+                    <input class="suggestion__button" type="submit" value="Send">
+                </form>
+            </div>
+
+        </section>
+
+        <!-- INTERVIEW SECTION -->
+        <section class="interview">
+
+            <h3 class="interview__title interview-title">
+                Interviews with <span class="--yellow">Industry Experts</span>
+            </h3>
+
+            <!-- INTERVIEW GRID -->
+            <div class="interview__grid">
+
+                <div class="interview__card interview-1">
+                    <h5 class="interview__name">Momo Pixel</h5>
+                    <figure>
+                        <img src="images/momo-pixel.jpg" alt="Momo Pixel Photo" class="interview__img">
+                    </figure>
+                    <p class="interview__body">“It was like every day somebody was touching me or saying something about
+                        my
+                        appearance,” Pixel said of her experience first moving to Portland, Oregon, which served as an
+                        inspiration to the game ...</p>
+                    <a href="#" class="interview__link">Read more</a>
+                </div>
+
+                <div class="interview__card interview-2">
+                    <h5 class="interview__name">Brie Code</h5>
+                    <figure>
+                        <img src="images/brie-code.jpg" alt="Brie Code Photo" class="interview__img">
+                    </figure>
+                    <p class="interview__body">In 2015, Canadian programmer and CEO of TRU LUV Brie Code noticed a gap
+                        in
+                        the games market. After having spent almost eight years at Ubisoft as an AI programmer, Code –
+                        and
+                        yes, that is her real surname ...</p>
+                    <a href="#" class="interview__link">Read more</a>
+                </div>
+
+                <div class="interview__card interview-3">
+                    <h5 class="interview__name">Kim Swift</h5>
+                    <figure>
+                        <img src="images/kim-swift-2.jpg" alt="Kim Swift Photo" class="interview__img">
+                    </figure>
+                    <p class="interview__body">Kim Swift made her name in the games industry with her first game. Portal
+                        became an instant classic, and launched her career. After working on the Left 4 Dead series, she
+                        left Valve and joined Airtight Games ...</p>
+                    <a href="#" class="interview__link">Read more</a>
+                </div>
+
+                <div class="interview__card interview-4">
+                    <h5 class="interview__name">Liz England</h5>
+                    <figure>
+                        <img src="images/liz-england.jpg" alt="Liz England Photo" class="interview__img">
+                    </figure>
+                    <p class="interview__body">Liz England is a game designer at Insomniac Games. She has degrees in
+                        English
+                        Literature and Interactive Media. Over the past six years she has worked on titles such as
+                        Saints
+                        Row 2, Scribblenauts and ...</p>
+                    <a href="#" class="interview__link">Read more</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="card__container">
+
+            <a href="#" class="card">
+                <h5 class="card__title">Looking for more details?</h5>
+                <p class="card__desc">Learn about the project</p>
+            </a>
+
+            <a href="#" class="card">
+                <h5 class="card__title">Want to collaborate or chat?</h5>
+                <p class="card__desc">Feel free to contact us</p>
+            </a>
+
+        </div>
+
+        <div class="footer__container footer__grid">
+
+            <div class="footer__column col-1">
+                <h5 class="footer__title">Equal Play</h5>
+                <a href="#" class="footer__link">Discover</a>
+                <a href="#" class="footer__link">Sitemap</a>
+                <a href="#" class="footer__link">Terms & Conditions</a>
+            </div>
+
+            <div class="footer__column col-2">
+                <h5 class="footer__title">Behind the Scenes</h5>
+                <a href="#" class="footer__link">About</a>
+                <a href="#" class="footer__link">Contact Us</a>
+            </div>
+
+            <div class="footer__column col-3">
+                <figure>
+                    <img src="images/logo.png" alt="Equal Play Logo" class="footer__img">
+                </figure>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="app/js/script.js"></script>
+</body>
+
+</html>

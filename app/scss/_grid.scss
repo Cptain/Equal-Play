@@ -1,0 +1,145 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 300px);
+  gap: 1em;
+  grid-template-areas:
+    "grid__item--1 grid__item--2 grid__item--3"
+    "grid__item--4 grid__item--5 grid__item--6"
+    "grid__item--7 grid__item--7 grid__item--7"
+    "grid__item--7 grid__item--7 grid__item--7";
+
+  &__item {
+    position: relative;
+    box-shadow: 0 0 16px rgba($color: $darkestPurple, $alpha: 0.4);
+
+    &:hover .caption {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 3px;
+  }
+
+  &__item--large {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.grid__item--1 {
+  grid-area: grid__item--1;
+}
+
+.grid__item--2 {
+  grid-area: grid__item--2;
+}
+
+.grid__item--3 {
+  grid-area: grid__item--3;
+}
+
+.grid__item--4 {
+  grid-area: grid__item--4;
+}
+
+.grid__item--5 {
+  grid-area: grid__item--5;
+}
+
+.grid__item--6 {
+  grid-area: grid__item--6;
+}
+
+.grid__item--7 {
+  grid-area: grid__item--7;
+}
+
+.caption {
+  transition: 0.5s ease;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 1em 0;
+  width: 100%;
+  background-color: rgba($color: $darkestPurple, $alpha: 0.9);
+
+  &__text {
+    font-size: 0.9em;
+    color: $silver;
+  }
+}
+
+.interview__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4em 2em;
+  grid-template-areas:
+    "interview-1 interview-2"
+    "interview-3 interview-4";
+}
+
+.interview-1 {
+  grid-area: interview-1;
+}
+
+.interview-2 {
+  grid-area: interview-2;
+}
+
+.interview-3 {
+  grid-area: interview-3;
+}
+
+.interview-4 {
+  grid-area: interview-4;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0;
+  grid-template-areas:
+    "col-1 col-2 col-3";
+}
+
+@include breakpoints-down(small) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 400px);
+    grid-template-areas:
+      "grid__item--1"
+      "grid__item--2"
+      "grid__item--3"
+      "grid__item--4"
+      "grid__item--5"
+      "grid__item--6"
+      "grid__item--7";
+  }
+
+  .interview__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 4em 0;
+    grid-template-areas:
+      "interview-1"
+      "interview-2"
+      "interview-3"
+      "interview-4";
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

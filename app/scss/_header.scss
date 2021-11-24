@@ -1,0 +1,201 @@
+@import "variables";
+@import "mixins";
+
+.header {
+  position: relative;
+  padding: 0 2em;
+
+  @include columns(xlarge);
+  margin: 0 auto;
+
+  // Positioning the hero image
+  &__img {
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 40%;
+
+    height: 1000px;
+    width: auto;
+  }
+
+  nav {
+    padding: 2em 0;
+  }
+
+  &__logo {
+    width: 100px;
+  }
+
+  &__menu {
+
+    // Drawing the lines for the mobile menu
+    >span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background-color: white;
+      transform-origin: 25% 50%;
+      transition: 300ms all ease-in-out;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+
+    &.open {
+      >span:first-child {
+        transform: rotate(45deg); //rotate into an "X"
+      }
+
+      >span:last-child {
+        transform: rotate(-45deg); //rotate into an "X"
+      }
+    }
+  }
+}
+
+.hero {
+  width: 80ch;
+  margin-top: 3em;
+
+  &__title {
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  &__body {
+    width: 55ch;
+    margin-top: 2em;
+
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  &__links {
+    margin-top: 4em;
+  }
+}
+
+.tooltip {
+  background-color: #ffffff;
+  color: $darkestPurple;
+  padding: 1em 2em;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  font-size: 0.9em;
+  min-width: 36ch;
+  border-radius: 0.5em;
+  z-index: 1;
+  box-shadow: 0px 4px 22px rgba($color: $darkestPurple, $alpha: 1.0);
+  opacity: 0;
+  transform-origin: bottom;
+  transition: all 200ms ease-out;
+  transform: rotateX(-90deg) translate(-50%, 0px);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: calc(50% - 5px);
+    bottom: -5px;
+    background: inherit;
+    border-right: inherit;
+    border-bottom: inherit;
+    transform: rotate(45deg);
+  }
+}
+
+.tooltip__tag {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted #fff;
+  background-color: transparent;
+  transition: 200ms ease-in;
+
+  &:focus,
+  &:focus-within,
+  &:hover {
+    background-color: $darkestPurple;
+
+    .tooltip {
+      opacity: 1;
+      transform: rotateX(0deg) translate(-50%, 0px);
+    }
+  }
+}
+
+/* MOBILE VERSION */
+
+@include breakpoints-down(small) {
+  .header {
+    padding: 0 1em;
+    overflow-x: hidden;
+
+    &__img {
+      height: 600px;
+      right: 0;
+      opacity: 0.2;
+      transform: translateX(-150px);
+    }
+
+    nav {
+      padding: 1em 0;
+    }
+  }
+
+  .hero {
+    width: auto;
+    margin-top: 1em;
+
+    &__body {
+      width: auto;
+    }
+
+    &__links {
+      flex-direction: column;
+      align-items: center;
+
+      :not(:last-child) {
+        margin-bottom: 1.5em;
+        margin-right: 0;
+      }
+    }
+
+    .tooltip {
+      padding: 0.5em 1em;
+      min-width: 29ch;
+
+      font-size: 0.8em;
+    }
+  }
+}
+
+/* TABLET VERSION */
+
+@include breakpoints-down(medium) {
+  .header {
+    &__img {
+      height: 800px;
+      right: 0;
+      opacity: 0.3;
+      transform: translateX(-150px);
+    }
+  }
+
+  .hero {
+    width: auto;
+
+    &__title {
+      font-size: 5em;
+    }
+  }
+}

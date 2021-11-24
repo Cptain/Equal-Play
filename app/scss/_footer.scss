@@ -1,0 +1,108 @@
+@import "variables";
+@import "mixins";
+
+.footer {
+    position: relative;
+    margin-top: 10em;
+    padding: 0 2em;
+    width: 100%;
+    background-color: $darkestPurple;
+
+    &__container {
+        @include columns(xlarge);
+        margin: 0 auto;
+        padding: 6em 0 4em;
+    }
+
+    &__img {
+        width: 100px;
+        float: right;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: 0 0 0.5em;
+    }
+
+    &__link {
+        font-size: 0.8em;
+        transition: 300ms ease-out;
+
+        &:hover {
+            color: $darkerYellow;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0.5em;
+        }
+    }
+}
+
+.card {
+    display: block;
+
+    background-color: $yellow;
+    color: $darkestPurple;
+    padding: 1em 1.5em;
+    transition: 300ms ease-out;
+
+    &:hover {
+        background-color: $darkerYellow;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        min-width: 32.4em;
+
+        position: absolute;
+        top: -12%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__desc {
+        margin: 0;
+        color: $darkestPurple;
+        font-size: 0.8em;
+        letter-spacing: -0.5px;
+    }
+
+    &:not(:last-child) {
+        margin-right: 3em;
+    }
+}
+
+@include breakpoints-down(small) {
+    .footer {
+        padding: 0 1em;
+
+        &__img {
+            width: 70px;
+        }
+    }
+
+    .card {
+    
+        &__container {
+            flex-direction: column;
+            width: 100%;    
+            top: -40%;
+            min-width: auto;
+            padding: 0 1em;
+        }
+    
+        &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 1em;
+        }
+    }
+}
